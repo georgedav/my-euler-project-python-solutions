@@ -1,0 +1,14 @@
+def f(n):
+    if n==0:
+        return 1
+    if n ==1:
+        return 5
+    else:
+        return (7*f(n-1))-f(n-2)
+def golden_nugget(n):
+    m=f(n)
+    t=1-(m**2)
+    a=-2+(4-(4*t*5))**0.5
+    x=int(a/10)
+    print(x)
+golden_nugget(15)
