@@ -1,3 +1,5 @@
+# solution to problem at https://projecteuler.net/problem=131
+
 cube_base=1
 A=[]
 count=0
