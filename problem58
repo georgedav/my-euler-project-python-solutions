@@ -1,0 +1,19 @@
+# Python Soltion  to the problem 58 at https://projecteuler.net/problem=58
+
+t=1
+k=2
+total=1
+count=0
+while True:
+    P=[]
+    for i in range(1,5):
+        p=(t**2)+(i*k)
+        if all(p%o!=0 for o in range(2,1+int(p**0.5))):
+            count+=1
+            P.append(p)
+    total+=4
+    if count/total <=0.1:
+        print(0.5*(total+1))
+        quit()
+    t+=2
+    k+=2
