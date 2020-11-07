@@ -1,0 +1,9 @@
+count=0
+p=2
+while True:
+    if all(p%i for i in range(2,1+int(p**0.5))):
+        count+=1
+    if count == 10001:
+        print(p)
+        break
+    p+=1
