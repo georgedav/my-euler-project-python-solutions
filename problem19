@@ -1,0 +1,29 @@
+def leap(year):
+    if year%400==0:
+        return True
+    elif year%100==0:
+        return False
+    elif year%4==0:
+        return True
+    else:
+        return False
+def months(year):
+    if leap(year):
+        return [0,31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335]
+    else:
+        return [0,31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
+d=6
+t=0
+for i in range(1901,2001):
+    for j in months(i):
+        if (j+1) %7==d:
+            t+=1
+        else:
+            pass
+    if leap(i):
+        d=d-2
+        d=d%7
+    else:
+        d=d-1
+        d=d%7
+print(t)
