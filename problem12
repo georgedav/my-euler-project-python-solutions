@@ -1,0 +1,17 @@
+def tr(n):
+    return int((n+1)*(n/2))
+a=1
+n=0
+while n==0:
+    y=2
+    t=tr(a)
+    for i in range(2,1+int(t**0.5)):
+        if t%i==0:
+            if i**2==t:
+                y+=1
+            else:
+                y+=2
+    if y>500:
+        print(a,t)
+        n=1
+    a+=1
