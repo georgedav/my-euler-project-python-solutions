@@ -1,0 +1,9 @@
+t=0
+for i in range(100):
+    t+=i+1
+g=t**2
+d=0
+for i in range(100):
+    f=(i+1)**2
+    g=g-f
+print(g)
