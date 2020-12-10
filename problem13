@@ -1,0 +1,6 @@
+r=0
+for i in range(100):
+    t=int(input())
+    r+=t
+r=str(r)
+print(r[:10])
