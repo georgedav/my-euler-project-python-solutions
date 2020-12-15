@@ -1,0 +1,8 @@
+a=1010101010
+W=['1','2','3','4','5','6','7','8','9','0']
+while True:
+    l=str(a**2)
+    if all(l[2*i]==W[i] for i in range(10)):
+        print(a,l)
+        quit()
+    a+=10
