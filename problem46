@@ -1,0 +1,19 @@
+def prim(n):
+    for i in range(1,1+int((n-1)**0.5)):
+        t=n-2*(i**2)
+        if t<=1:
+            continue
+        if all(t%j!=0 for j in range(2,1+int(t**0.5))):
+            return (t,i)
+    return 0
+
+a=9
+while True:
+    a+=2
+    for i in range(2,1+int(a**0.5)):
+        if a%i==0:
+            if prim(a)==0:
+                print(a)
+                quit()
+            else:
+                continue
