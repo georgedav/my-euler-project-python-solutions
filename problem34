@@ -1,0 +1,17 @@
+def fact(n):
+    if n ==0 :
+        return 1
+    else:
+        return n *fact(n-1)
+n=3
+k=0
+A=[]
+while n < 1000000:
+    l=str(n)
+    t=0
+    for i in l:
+        t+=fact(int(i))
+    if t==n:
+        A.append(t)
+    n+=1
+print(sum(A))
